@@ -11,14 +11,14 @@ const {SecretClient} = require("@azure/keyvault-secrets");
 const credential = new DefaultAzureCredential();
 
       // Define the URL to reach your key vault
-      const vaultName = "enterNameOfYourKeyVault"; //delete before pushing to GitHub
+      const vaultName = "yourvaultname"; //delete before pushing to GitHub
       const url = `https://${vaultName}.vault.azure.net`
 
       // Create the secrets client to connect to the vault service
       const client = new SecretClient(url, credential);
 
       // Set the OCR secret
-      const secretName = "enterYourSecretNameFromKeyVault";
+      const secretName = "secretname";
 
 // Configure OCR
 // 'use strict';
@@ -36,7 +36,7 @@ const ApiKeyCredentials = require('@azure/ms-rest-js').ApiKeyCredentials;
  * This single client is used for all examples.
  */
 const key = secretName;
-const endpoint = 'https://imagetotextreact.cognitiveservices.azure.com/';
+const endpoint = 'https://yourul.cognitiveservices.azure.com/';
 
 const computerVisionClient = new ComputerVisionClient(
   new ApiKeyCredentials({ inHeader: { 'Ocp-Apim-Subscription-Key': key } }), endpoint);
